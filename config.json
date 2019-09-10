@@ -1,0 +1,24 @@
+{
+    "train_root": "/mnt/lustre/sensetime/share/DataSet/ilsvrc2012/train",
+    "train_meta": "/mnt/lustre/sensetime/share/DataSet/ilsvrc2012//meta/train.txt",
+    "val_root": "/mnt/lustre/sensetime/share/DataSet/ilsvrc2012/val",
+    "val_meta": "/mnt/lustre/sensetime/share/DataSet/ilsvrc2012/meta/val.txt",
+    "num_workers": 4,
+    "local_batch_size": 2,
+    "global_batch_denom": 256,
+    "num_epochs": 90,
+    "optimizer": {
+        "lr": 1e-1,
+        "momentum": 0.9,
+        "weight_decay": 1e-4,
+        "nesterov": true
+    },
+    "lr_scheduler": {
+        "milestones": [
+            30,
+            60,
+            80
+        ],
+        "gamma": 0.1
+    }
+}
